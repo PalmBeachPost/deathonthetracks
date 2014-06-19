@@ -1,0 +1,1 @@
+A Medley-friendly static html story layout
