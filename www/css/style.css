@@ -63,14 +63,14 @@
 .rail {
 	width: 30%;
 	display: inline-block;
-	border-right: 1px dotted grey;
 	padding-right: 10px;
 }
 .split .notrail{
 	width: 55%;
 	margin: auto;
 	display: inline-block;
-	padding-left: 2.5%;
+	padding-left: 2.5%;	
+	border-left: 1px dotted grey;
 }
 #mapdetails{	
 	background-color: grey;
