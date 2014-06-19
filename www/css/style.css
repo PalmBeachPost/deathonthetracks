@@ -2,6 +2,8 @@
 	height: 50px;
 }
 
+/*----------------------------cover----------------------*/
+
 .cover{
 	background-image: url('http://www2.palmbeachpost.com/projects/news/fcat14/img/traincut.jpg');
 	background-repeat: no-repeat;
@@ -13,17 +15,70 @@
 	height: 20vh;
 }
 
-#content-section h1 {
-	color: white;
-	background-color: rgba(100,100,100,.5);
-	font-weight: normal;
-	max-width: 400px;
-	padding: 10px;
+#content-section #hed {
+	color: white;	
 	display: inline;
 	position: absolute;
-	top:40%;
+	top:65%;
 	right: 5%;
 }
+#content-section #hed>*{
+	background-color: rgba(100,100,100,.5);
+	font-weight: normal;
+	max-width: 550px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#content-section h3{
+	font-size: 110%;
+	font-style: italic;
+	font-weight: lighter;
+}
+
+/*-------------------------story------------------------*/
+#story-section{
+	width:90%;
+	margin: auto;	
+	text-align: justify;
+	margin-top: 50px;
+}
+#story-section section{
+	padding-top: 20px;
+}
+.story{
+	margin:auto;
+}
+.full{	
+	width:75%;
+}
+.split{
+	width:100%;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.rail {
+	width: 30%;
+	display: inline-block;
+	border-right: 1px dotted grey;
+	padding-right: 10px;
+}
+.split .notrail{
+	width: 55%;
+	margin: auto;
+	display: inline-block;
+	padding-left: 2.5%;
+}
+#mapdetails{	
+	background-color: grey;
+	margin-bottom: 50px;
+}
+
+
+/*-------------------------------MEDIA QUERIES----------------------*/
 
 @media (max-width: 320px) {
 
