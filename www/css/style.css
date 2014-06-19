@@ -1,7 +1,30 @@
-.spacer {
+#undernav {
 	height: 50px;
 }
 
 .cover{
 	background-image: url('http://www2.palmbeachpost.com/projects/news/fcat14/img/traincut.jpg');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-position: 30% 50%;
+	height: 20vh;
+}
+
+#content-section h1 {
+	color: white;
+	background-color: rgba(100,100,100,.5);
+	font-weight: normal;
+	max-width: 400px;
+	padding: 10px;
+	display: inline;
+	position: absolute;
+	top:40%;
+	right: 5%;
+}
+
+@media (max-width: 320px) {
+
 }
