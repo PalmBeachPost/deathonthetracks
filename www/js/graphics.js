@@ -1,5 +1,5 @@
 $(function () {
-        $('#graphic-1').highcharts({
+       var chart1= $('#graphic-1').highcharts({
             chart: {
                 type: 'column'
             },
@@ -64,4 +64,113 @@ $(function () {
             ]
         });
 
+      var chart2 =$('#graphic-2').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: 1,//null,
+                plotShadow: false
+            },
+            title: {
+                text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+            },
+            tooltip: {
+                pointFormat: '<b>{point.y}</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.y}',
+                        style: {
+                            color: 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: '',
+                data: [
+                    ['Crossing (Pedestrian)',11],
+                    ['Crossing (Vehicle)',  7],
+                    ['Other',   3],
+                    ['Tracks',33],
+                    ['Unknown', 6]
+                ]
+            }]
+        });
+        
+       var chart3= $('#graphic-3').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,
+            plotShadow: false
+        },
+        title: {
+            text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+        },
+        tooltip: {
+            pointFormat: '<b>{point.y}</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.y}',
+                    style: {
+                        color: 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: '',
+            data: [
+                ['White',   41],
+                ['Black',   20]
+            ]
+        }]
     });
+    var chart4=$('#graphic-4').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,//null,
+            plotShadow: false
+        },
+        title: {
+            text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+        },
+        tooltip: {
+            pointFormat: '<b>{point.y}</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.y}',
+                    style: {
+                        color: 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: '',
+            data: [
+                ['Male',   53],
+                ['Female', 8]
+            ]
+        }]
+    });
+
+
+
+});

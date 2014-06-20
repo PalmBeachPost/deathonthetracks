@@ -24,6 +24,9 @@
 
 	<script type="text/javascript" src="http://media.cmgdigital.com/shared/media/2014-06-17-18-41-32/web/common/javascript/jquery.ui.core.min.js"></script>
 	<script type="text/javascript" src="http://media.cmgdigital.com/shared/media/2014-06-17-18-41-32/web/common/javascript/flatpage.js"></script>
+
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"-->
+  
 </head>
 <body>
 	<script type="text/javascript">
@@ -41,6 +44,7 @@
 		var path = './css/';
 		//var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
 		AddCss(path,'style.css');
+		AddCss('http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css','');
 	</script>
 	<div id="content-section">
 		<!-- <div id="undernav" class="spacer"></div> -->
@@ -59,7 +63,19 @@
 				<p>While far more people cross the tracks at busy intersections in cars, most of the deaths are at isolated stretches of railroad with no warning gates, often shortcuts for pedestrians.</p>
 				<p>And twice as many pedestrians have died on the FEC since 2008 as on the CSX tracks, which hugs Interstate 95 in Palm Beach County.</p>
 			</div>
-			<div id="graphic-1" class="full graphic"></div>
+			<div id="graphics">
+				  <ul>
+				    <li><a href="#graphic-1">By track</a></li>
+				    <li><a href="#graphic-2">By location</a></li>
+				    <li><a href="#graphic-3">By race</a></li>
+				    <li><a href="#graphic-4">By gender</a></li>
+				  </ul>
+				  <div id="graphic-1" class="full graphic"></div>
+				  <div id="graphic-2" class="full graphic"></div>
+				  <div id="graphic-3" class="full graphic"></div>				  
+				  <div id="graphic-4" class="full graphic"></div>				  
+			</div>
+			
 			<div id= "section-2" class="full story">	
 						<p>An FEC spokesman says the company, which dates to Henry Flagler&rsquo;s time, is not to blame. FEC posts warning signs to keep pedestrians away. It does not view fencing as a solution. And, the company says, if a person dies crossing the tracks, the person is to blame because they are trespassing.</p>
 						<p>&ldquo;It&rsquo;s no different than a hunter who puts up a no trespassing sign on his land and some third party comes out there and gets hurt,&rdquo; FEC spokesman Robert Ledoux said.</p>
@@ -70,18 +86,18 @@
 				<div class="left rail">
 					<div id="map">
 						<iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/kavyas.g8n58hl3/attribution.html'></iframe>
-					</div>
-				</div>
-				<div id="mapbuddy" class="notrail">
-					<div id="mapdetails">
+						<div id="mapdetails">
 						<h4>Marty Armetta</h4>
 						<p>Age: 43</p>
 						<p>Race: White</p>
 						<p>data of incident: 4/7/2009</p>
-					</div>					
+					</div>			
+					</div>
+				</div>
+				<div id="mapbuddy" class="notrail">						
 					<div id="section-3" class="story">
 						<p><strong>Footpaths dot the corridor</strong></p>
-						<p><em><em>Cuervo&rsquo;s brown slip-on shoes and a prescription bottle were found about 75 feet north of where the train hit her.</em> The train engineer said Cuervo was standing at the edge of the tracks, looking at something in her hands. She didn&rsquo;t react when he blew the whistle.</em></p>
+						<p><span class="note">Cuervo&rsquo;s brown slip-on shoes and a prescription bottle were found about 75 feet north of where the train hit her. The train engineer said Cuervo was standing at the edge of the tracks, looking at something in her hands. She didn&rsquo;t react when he blew the whistle.</em></p>
 						<p><em><em> &mdash; </em></em>Medical Examiner report 09-1375, condensed</p>
 						<p>At least twice a day, Jorge Cuervo uses the footpath his wife died on.</p>
 						<p>His two daughters say they don&rsquo;t understand why two years after their mother&rsquo;s death, nothing prevents their father &mdash; and their neighbors &mdash; from freely crossing the tracks. People use the footpath all the time, they say. And it&rsquo;s easy to understand why: The path cuts a mile off the trip from their neighborhood to nearby stores and a bus stop.</p>
@@ -195,6 +211,7 @@
 	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains/js/skrollr.min.js"></script>
 
 	<!--higcharts-->
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 
 	<script type="text/javascript" src="./js/graphics.js"></script>
