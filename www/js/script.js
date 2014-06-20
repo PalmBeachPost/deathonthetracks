@@ -6,8 +6,6 @@ $(document).ready(function(){
 	var throttledResize = _.throttle(calcLayout, 100);
 	$(window).resize(throttledResize);
 
-	//var throttledScroll = _.throttle(hideMap, 1000);
-
 	skrollr.init();
 });
 
@@ -20,21 +18,12 @@ function calcLayout()
 
 function MyHTML5shiv()
 {
-	/* $('div#map').attr("data-10-top","position:inherit;top:0%")
-	 	.attr("data-top","position:fixed;top:20%;width:27%")
-	 	.attr("data-1-top","width:100%");*/
-
-	 	 $('div#map').attr("data-10-top","position:inherit;top:0%")
-	 	.attr("data-top","position:fixed;top:20%;width:27%")
-	 	.attr("data-1-top","width:100%");
+	$('div#map').attr("data-anchor-target","#mapbuddy")
+		.attr("data-top-top","position:inherit;bottom:!50%;;width:!100%")
+	 	.attr("data--50-top","position:fixed;bottom:!20%;width:!27%")
+	 	.attr("data-bottom","position:absolute;bottom:!3%;width:!30%;");
 }
 
 function MedleyShiv(){
 	$('hr.double-rule').parent().addClass("forcefullwidth");
 }
-
-/*function hideMap(){
-	var currScroll = $(window).scrollTop() + $(window).height();
-	var endOfStoryScroll = $('#content-section').offset().bottom
-	if('#content-section')
-}*/

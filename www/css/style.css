@@ -59,9 +59,15 @@
 }
 .full{	
 	width:75%;
+	margin: auto;
+}
+.graphic{
+	margin-bottom: 45px;
+	margin-top: 45px;
 }
 .split{
 	width:100%;
+	position: relative;
 }
 .left{
 	float: left;
@@ -83,6 +89,10 @@
 #mapdetails{	
 	background-color: grey;
 	margin-bottom: 50px;
+}
+
+#map{
+	position: relative;
 }
 
 
