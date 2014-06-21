@@ -38,7 +38,7 @@
 	padding-left: 10px;
 	padding-right: 10px;
 }
-#content-section h3{
+.cover h3{
 	font-size: 110%;
 	font-style: italic;
 	font-weight: lighter;
@@ -86,9 +86,10 @@
 	border-left: 1px dotted grey;
 }
 
-#mapdetails{	
-	background-color: grey;
-	margin-bottom: 50px;
+#mapdetails{		
+	padding-top: 30px;
+	margin-bottom: 10px;
+	text-align: right;
 }
 
 #map{
@@ -128,6 +129,22 @@
 #graphics .ui-corner-left,
 #graphics .ui-corner-tl{
 	border-radius: 0px;
+}
+
+/*-------------------notes------------------------------------------*/
+p.note{
+	width:95%;
+	font-family: "Courier New", Courier, monospace;
+	background-color: #FAFAED;
+	padding: 10px 15px;
+	box-shadow: 5px 5px 5px #888888;
+	text-align:left;
+	margin-bottom: 30px;
+}
+.note span{
+	display: block;
+	text-align: right;
+	padding-top: 10px;
 }
 /*-------------------------------MEDIA QUERIES----------------------*/
 
