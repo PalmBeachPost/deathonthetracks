@@ -78,6 +78,7 @@
 .rail {
 	width: 30%;
 	padding-right: 10px;
+	padding-bottom: 50px;
 }
 .split .notrail{
 	width: 55%;
