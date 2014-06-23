@@ -96,6 +96,19 @@
 #map{
 	position: relative;
 }
+/*--------------------------wraparound----------*/
+.wraparound{
+	width: 50%;
+	min-width: 300px;
+	margin-left: 24px;
+}
+.wraparound .caption{
+	text-align: justify;
+	color:#444444;	
+	min-height: 1em;
+	padding: .5em .5em;
+	font-size: .95em;
+}
 
 /*---------------------------------Graphics------------------------*/
 #graphics{	
@@ -153,6 +166,15 @@ p.note{
 	background-color: #FF9C00;
 	padding: 1px 2px;
 }
+
+/*--------------------slideshow-------------------------------------*/
+#earthell-slideshow .item>img{
+	max-height: 40vh;
+	width: auto;
+	margin: auto;
+}
+
+
 /*-------------------------------MEDIA QUERIES----------------------*/
 
 @media (max-width: 320px) {

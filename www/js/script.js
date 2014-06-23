@@ -7,6 +7,7 @@ $(document).ready(function(){
 	$(window).resize(throttledResize);
 
 	skrollr.init();
+	$('.carousel').carousel({ interval: false});
 });
 
 function calcLayout()

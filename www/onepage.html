@@ -41,8 +41,8 @@
 		    head.appendChild(link);	
 		}
 		//Add you external css files here 
-		//var path = './css/';
-		var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
+		var path = './css/';
+		//var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
 		AddCss(path,'style.css');
 		AddCss('http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css','');
 	</script>
@@ -90,7 +90,7 @@
 						<h4>Marty Armetta</h4>
 						<p>Age: 43</p>
 						<p>Race: White</p>
-						<p>data of incident: 4/7/2009</p>
+						<p>Date of incident: 4/7/2009</p>
 					</div>			
 					</div>
 				</div>
@@ -98,6 +98,10 @@
 					<div id="section-3" class="story">
 						<h3>Footpaths dot the corridor</h3>
 						<p class="note">Cuervo&rsquo;s brown slip-on shoes and a prescription bottle were found about 75 feet north of where the train hit her. The train engineer said Cuervo was standing at the edge of the tracks, looking at something in her hands. She didn&rsquo;t react when he blew the whistle. <span>&mdash; Medical Examiner report 09-1375, condensed</span></p>
+						<div class="wraparound right">
+							<img src="http://www2.palmbeachpost.com/projects/news/fcat14/img/traincut.jpg"/>
+							<div class="caption">The Cuervo Family (l-r) daughter Andrea, 19, Father Jorge, 51, and daughter Luisa, 24, stand next to the train tracks May 28, 2014, where the family's mother Leonor Cuervo, was killed 2 years ago by a train when coming home from work. The family said Cuervo had gotten off a bus on Dixie Hwy (PLEASE CONFIRM) and proceeded to cross the tracks and pass through a footpath to her apartment complex when she was killed.  (Damon Higgins / The Palm Beach Post)</div>							
+						</div>
 						<p>At least twice a day, Jorge Cuervo uses the footpath his wife died on.</p>
 						<p>His two daughters say they don&rsquo;t understand why two years after their mother&rsquo;s death, nothing prevents their father &mdash; and their neighbors &mdash; from freely crossing the tracks. People use the footpath all the time, they say. And it&rsquo;s easy to understand why: The path cuts a mile off the trip from their neighborhood to nearby stores and a bus stop.</p>
 						<p>A hard-to-see &ldquo;No Trespassing&rdquo; sign, curled inward, hangs on a concrete post about 100 feet away, facing dense vegetation.</p>
@@ -136,6 +140,38 @@
 						<p>&ldquo;The sad part is that even fencing wouldn&rsquo;t preclude or prevent any accidents along the corridor,&rdquo; Ledoux said. &ldquo;They just won&rsquo;t.&rdquo;</p>
 						<p>Still, he said the FEC would consider installing some fences if local governments approached them about a partnership, but none have in at least the last three years. </p>
 						<p></p>
+						<!--SLIDESHOW-->
+
+						<div id="earthell-slideshow" class="carousel slide wraparound right">
+							<div class="carousel-inner">
+								<div class="item active">
+      								<img src="./img/20140603-met-train-deaths-01.jpg" \>
+      								<div class="caption">Melanie Allen's 15-year old son Earthell was hit by a train in 2008. "He was such a lovely child," she said. She was photographed at home in West Palm Beach Tuesday, June 3, 2014 with a framed poem written by Earthell on the day of his death. "It was a tragedy, and so hard to get past," she said. (Bruce R. Bennett / The Palm Beach Post)</div>
+      							</div>
+      							<div class="item">
+      								<img src="./img/20140603-met-train-deaths-02.jpg" \>
+      								<div class="caption">Melanie Allen's 15-year old son Earthell was hit by a train in 2008. "He was such a lovely child," she said. She was photographed at home in West Palm Beach Tuesday, June 3, 2014 with a framed poem written by Earthell on the day of his death. "It was a tragedy, and so hard to get past," she said. (Bruce R. Bennett / The Palm Beach Post)</div>
+      							</div>
+      							<div class="item">
+      								<img src="./img/20140603-met-train-deaths-03.jpg" \>
+      								<div class="caption">Melanie Allen's 15-year old son Earthell was hit by a train in 2008. "He was such a lovely child," she said. She was photographed at home in West Palm Beach Tuesday, June 3, 2014 with a framed poem written by Earthell on the day of his death. "It was a tragedy, and so hard to get past," she said. (Bruce R. Bennett / The Palm Beach Post)</div>
+      							</div>
+      							<div class="item">
+      								<img src="./img/20140603-met-train-deaths-04.jpg" \>
+      								<div class="caption">Earthell Allen in 2008.</div>
+      							</div>
+      							<div class="item">
+      								<img src="./img/20140603-met-train-deaths-05.jpg" \>
+      								<div class="caption">Earthell Allen in 2007.</div>
+      							</div>
+							</div>
+							<a class="left carousel-control" href="#earthell-slideshow" data-slide="prev">
+						    	&lsaquo;
+						    </a>
+						    <a class="right carousel-control" href="#earthell-slideshow" data-slide="next">
+						    	&rsaquo;
+						    </a>
+						</div>
 						<p>All Aboard Florida has plans to install fencing near its West Palm Beach station to stop people who might be in a hurry to catch the train, but there are no plans to install fencing anywhere else along the corridor. </p>
 						<p>The FEC has a police officer for every 60 miles or so of railroad, and the officers will tell people to leave the track if they see them trespassing, Ledoux said. Their primary job is not to issue tickets or pursue trespassers.</p>
 						<p>Pottroff said in some locations, it would be unreasonable to expect people to walk an extra mile. Those places need pedestrian crossings &mdash; with gates and flashing lights, just like vehicle crossings.</p>
@@ -197,7 +233,11 @@
 		</div>
 	</div>	
 	<!--JQUERY-->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!--Bootstrap carousel-->
+	<script src="./js/carousel.js"></script>
 
 	<!--Underscore-->
 	<script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
@@ -206,7 +246,6 @@
 	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains/js/skrollr.min.js"></script>
 
 	<!--higcharts-->
-	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 
 	<script type="text/javascript" src="./js/graphics.js"></script>
