@@ -4,10 +4,7 @@ $(function () {
                 type: 'column'
             },
             title: {
-                text: 'No. of deaths on train tracks in Palm Beach County'
-            },
-            subtitle: {
-                text: 'Source: Fedor???'
+                text: null
             },
             xAxis: {
                 categories: ['2008', '2009', '2010', '2011', '2012', '2013', '2014'],
@@ -71,7 +68,7 @@ $(function () {
                 plotShadow: false
             },
             title: {
-                text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+                text: null
             },
             tooltip: {
                 pointFormat: '<b>{point.y}</b>'
@@ -109,7 +106,7 @@ $(function () {
             plotShadow: false
         },
         title: {
-            text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+            text: null
         },
         tooltip: {
             pointFormat: '<b>{point.y}</b>'
@@ -143,7 +140,7 @@ $(function () {
             plotShadow: false
         },
         title: {
-            text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+            text: null
         },
         tooltip: {
             pointFormat: '<b>{point.y}</b>'
