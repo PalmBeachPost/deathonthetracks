@@ -102,6 +102,7 @@
 	margin: auto;
 	border: none;
 	border-radius: none;
+	padding-top: 50px;
 }
 #graphics ul {
 	width: 75%;
@@ -111,7 +112,7 @@
 #graphics ul li{
 	list-style: none;
 	float: left;
-	min-width: 100px;	
+	width: 70px;	
 	background-image: none;
 }
 
@@ -130,6 +131,10 @@
 #graphics .ui-corner-left,
 #graphics .ui-corner-tl{
 	border-radius: 0px;
+}
+#graphics h4{
+	text-align: center;
+	font-weight: normal;
 }
 
 /*-------------------notes------------------------------------------*/

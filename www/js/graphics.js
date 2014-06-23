@@ -102,7 +102,7 @@ $(function () {
             }]
         });
         
-       var chart3= $('#graphic-3').highcharts({
+       var chart3 = $('#graphic-3').highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: 1,

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$( "#graphics" ).tabs();
 	MedleyShiv();
-	MyHTML5shiv();
+	MyHTML5Shiv();
 	calcLayout();	
 	var throttledResize = _.throttle(calcLayout, 100);
 	$(window).resize(throttledResize);
@@ -14,9 +14,12 @@ function calcLayout()
 	// calculate cover height
 	$bgheight=$(window).height()-0;
 	$('.cover').css('height', $bgheight+'px');
+
+	var tabWidth = ($('#graphics ul').width()/4)*.95;
+	$('#graphics li').css('width', tabWidth+'px');
 }
 
-function MyHTML5shiv()
+function MyHTML5Shiv()
 {
 	$('div#map').attr("data-anchor-target","#mapbuddy")
 		.attr("data-top-top","position:inherit;bottom:!10%;;width:!100%")
