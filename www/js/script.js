@@ -27,3 +27,27 @@ function MyHTML5shiv()
 function MedleyShiv(){
 	$('hr.double-rule').parent().addClass("forcefullwidth");
 }
+
+$( '.tooltipItem' ).tooltip({
+      items: ".tooltipItem",
+      content: function() {
+        var id = $( this ).attr('id');
+        var imgSrc=$ImgSrcs[id];
+        return "<img class='tooltipImg' src='"+imgSrc+"' width='250px'/>";       
+      }
+});
+
+$('.tooltipItem').click(function(){
+	if($(this).is('.open')){
+		$(this).removeClass('open');
+		$(this).tooltip("close");
+		return;
+	}
+	$(this).addClass('open')
+	$(this).tooltip("open");
+})
+
+var $ImgSrcs = {
+	"cuervos":"http://www2.palmbeachpost.com/projects/news/fcat14/img/traincut.jpg",
+	"footpath": "http://media.cmgdigital.com/shared/lt/lt_cache/matte/302/225/img/photos/2014/06/22/78/17/burgos-900.jpg"
+}

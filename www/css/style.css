@@ -147,6 +147,12 @@ p.note{
 	text-align: right;
 	padding-top: 10px;
 }
+
+/*----------------------tooltips--------------------------------------*/
+.tooltipItem{
+	background-color: #FF9C00;
+	padding: 1px 2px;
+}
 /*-------------------------------MEDIA QUERIES----------------------*/
 
 @media (max-width: 320px) {
