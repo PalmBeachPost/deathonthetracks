@@ -4,10 +4,7 @@ $(function () {
                 type: 'column'
             },
             title: {
-                text: 'No. of deaths on train tracks in Palm Beach County'
-            },
-            subtitle: {
-                text: 'Source: Fedor???'
+                text: null
             },
             xAxis: {
                 categories: ['2008', '2009', '2010', '2011', '2012', '2013', '2014'],
@@ -71,7 +68,7 @@ $(function () {
                 plotShadow: false
             },
             title: {
-                text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+                text: null
             },
             tooltip: {
                 pointFormat: '<b>{point.y}</b>'
@@ -102,14 +99,14 @@ $(function () {
             }]
         });
         
-       var chart3= $('#graphic-3').highcharts({
+       var chart3 = $('#graphic-3').highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: 1,
             plotShadow: false
         },
         title: {
-            text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+            text: null
         },
         tooltip: {
             pointFormat: '<b>{point.y}</b>'
@@ -143,7 +140,7 @@ $(function () {
             plotShadow: false
         },
         title: {
-            text: 'No. of deaths on train tracks in Palm Beach County (2008-2014)'
+            text: null
         },
         tooltip: {
             pointFormat: '<b>{point.y}</b>'

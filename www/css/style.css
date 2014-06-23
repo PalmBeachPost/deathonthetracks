@@ -43,7 +43,20 @@
 	font-style: italic;
 	font-weight: lighter;
 }
+#content-section #credits {
+	background-color: rgba(100,100,100,.5);
+	color: black;	
+	display: inline;
+	position: absolute;
+	right: 1%;
+	bottom: 0%;
+}
 
+.cover h5{	
+	font-size: 100%;
+	font-style: normal;
+	font-weight: lighter;
+}
 /*-------------------------story------------------------*/
 #story-section{
 	width:90%;
@@ -115,6 +128,7 @@
 	margin: auto;
 	border: none;
 	border-radius: none;
+	padding-top: 1em;
 }
 #graphics ul {
 	width: 75%;
@@ -123,8 +137,7 @@
 
 #graphics ul li{
 	list-style: none;
-	float: left;
-	min-width: 100px;	
+	float: left;		
 	background-image: none;
 }
 
@@ -143,6 +156,17 @@
 #graphics .ui-corner-left,
 #graphics .ui-corner-tl{
 	border-radius: 0px;
+}
+#graphicshed{
+	text-align: center;
+	font-weight: normal;
+}
+
+#graphicssubhed{
+	font-style: italic;
+	text-align: center;
+	font-weight: normal;
+	padding-bottom: .5em;
 }
 
 /*-------------------notes------------------------------------------*/
