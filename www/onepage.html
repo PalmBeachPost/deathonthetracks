@@ -41,8 +41,8 @@
 		    head.appendChild(link);	
 		}
 		//Add you external css files here 
-		//var path = './css/';
-		var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
+		var path = './css/';
+		//var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
 		AddCss(path,'style.css');
 		AddCss('http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css','');
 		AddCss('https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css','');
@@ -55,7 +55,7 @@
 				<h3>By Fedor Zarkhin</h3>
 			</span>
 			<span id="credits">				
-				<h5>Photo by:[photog name here]</h5>
+				<h5>Photo by: Damon Higgins / The Palm Beach Post</h5>
 			</span>
 		</div>
 		<div id="story-section">
@@ -92,15 +92,13 @@
 				<div class="left rail">
 					<div id="map">													
 						<div id="mapbox"></div>
-						<div id="mapdetails">
-							<ul id="legend">
-								<li><img src="./img/red.png" width="10px"/>Suicides</li>
-								<li><img src="./img/yellow.png" width="10px"/>Accidents</li>
-							</ul>
-							<h4 id="name">Marty Armetta</h4>
-							<p>Age: <span id="age">Age: 43</span></p>
-							<p>Race: <span id="race">Race: White</span></p>
-							<p>Date of incident: <span id="date">4/7/2009</span></p>
+						<ul id="legend">
+								<li><img src="./img/red.png" width="10px"/>Accident</li>
+								<li><img src="./img/yellow.png" width="10px"/>Suicide</li>
+						</ul>
+						<div id="mapdetails">							
+							<h4 id="name">Leonor Rahas de la Cuervo</h4>
+							<p>Age: <span id="age">52</span>| Race: <span id="race">White</span>| Date of incident: <span id="date">4/25/2012</span></p>
 						</div>	
 					</div>
 				</div>
