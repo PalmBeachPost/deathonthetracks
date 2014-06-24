@@ -24,8 +24,11 @@ function MyHTML5Shiv()
 {
 	$('div#map').attr("data-anchor-target","#mapbuddy")
 		.attr("data-top-top","position:inherit;bottom:!10%;;width:!100%")
-	 	.attr("data--50-top","position:fixed;bottom:!10%;width:!27%")
+	 	.attr("data--50-top","position:fixed;bottom:!7%;width:!27%")
 	 	.attr("data-bottom","position:absolute;bottom:!0%;width:!30%;");
+
+	 $('a.left.carousel-control').attr("data-slide","prev");
+	 $('a.right.carousel-control').attr("data-slide","next");
 }
 
 function MedleyShiv(){

@@ -41,20 +41,21 @@
 		    head.appendChild(link);	
 		}
 		//Add you external css files here 
-		var path = './css/';
-		//var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
+		//var path = './css/';
+		var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
 		AddCss(path,'style.css');
 		AddCss('http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css','');
+		AddCss('https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css','');
 	</script>
 	<div id="content-section">
 		<!-- <div id="undernav" class="spacer"></div> -->
 		<div class="cover">
 			<span id="hed">
-				<h1>Trains kill people - a clickbait hed</h1>
+				<h1>Fedor has not written a hed yet</h1>
 				<h3>By Fedor Zarkhin</h3>
 			</span>
 			<span id="credits">				
-				<h5>Photos by:[photog name here]|Produced by: Fedor Zarkhin and Kavya Sukumar</h5>
+				<h5>Photo by:[photog name here]</h5>
 			</span>
 		</div>
 		<div id="story-section">
@@ -89,14 +90,17 @@
 			</div>
 			<div class="split">
 				<div class="left rail">
-					<div id="map">						
-						<!-- <iframe width='100%' height='600px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/kavyas.ijdg04lh/zoompan,zoomwheel,geocoder.html'></iframe> -->								
+					<div id="map">													
 						<div id="mapbox"></div>
 						<div id="mapdetails">
-							<h4>Marty Armetta</h4>
-							<p>Age: 43</p>
-							<p>Race: White</p>
-							<p>Date of incident: 4/7/2009</p>
+							<ul id="legend">
+								<li><img src="./img/red.png" width="10px"/>Suicides</li>
+								<li><img src="./img/yellow.png" width="10px"/>Accidents</li>
+							</ul>
+							<h4 id="name">Marty Armetta</h4>
+							<p>Age: <span id="age">Age: 43</span></p>
+							<p>Race: <span id="race">Race: White</span></p>
+							<p>Date of incident: <span id="date">4/7/2009</span></p>
 						</div>	
 					</div>
 				</div>
@@ -171,10 +175,10 @@
       								<div class="caption">Earthell Allen in 2007.</div>
       							</div>
 							</div>
-							<a class="left carousel-control" href="#earthell-slideshow" data-slide="prev">
+							<a class="left carousel-control" href="#earthell-slideshow">
 						    	&lsaquo;
 						    </a>
-						    <a class="right carousel-control" href="#earthell-slideshow" data-slide="next">
+						    <a class="right carousel-control" href="#earthell-slideshow">
 						    	&rsaquo;
 						    </a>
 						</div>
@@ -256,13 +260,8 @@
 
 	<!--maps-->
 	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
 
-	<script type="text/javascript" src="./js/graphics.js"></script>
-	<script type="text/javascript" src="./js/script.js"></script>
-	<script>
-	L.mapbox.map('mapbox', 'kavyas.ijdg04lh')
-	.setView([26.6904,-80.3293],9)
-	.addControl(L.mapbox.geocoderControl('kavyas.ijdg04lh'));
-	</script>
+	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains/js/graphics.js"></script>
+	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains/js/script.js"></script>
+	<script type="text/javascript" src="./js/map.js"></script>
   </body>
