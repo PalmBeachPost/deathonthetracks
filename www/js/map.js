@@ -16,27 +16,51 @@ var myIcon = L.Icon.extend({
 
 var redIcon= new myIcon({iconUrl: './img/red.png'});
 var yellowIcon= new myIcon({iconUrl: './img/yellow.png'});
+var highlightIcon = new myIcon(
+		{iconUrl: './img/highlight.png',
+		 iconSize: [16,16],
+		 iconAnchor: [8,8]
+		})
 
 var incidentsLayer = L.mapbox.featureLayer().addTo(map);
 
-// default styling the icon as they are added
+//set eventhandlers and icons as layers are added
 incidentsLayer.on('layeradd', function(e){
 	var marker = e.layer;
-	marker.on('mouseover', markerHighlight);
+	marker.on('mouseover', updateMarkerAndInfo);
+	marker.on('click', updateMarkerAndInfo);
+	marker.on('mouseout', resetMarker);
+	setIncidentIcon(marker,false);
+})
+
+incidentsLayer.setGeoJSON(geojsonData);
+
+function updateMarkerAndInfo(e){
+	setIncidentIcon(this,true)
+	var prop = this.feature.properties;
+	$('#mapdetails #name').text(prop.name);
+	$('#mapdetails #age').text(prop.age);
+	$('#mapdetails #race').text(prop.race);
+	$('#mapdetails #date').text(prop.date);
+}
+
+function resetMarker(e){
+	setIncidentIcon(this,false);
+}
+function setIncidentIcon(marker, ishighlight)
+{
+	if(ishighlight)
+	{
+		marker.setIcon(highlightIcon);
+		marker.setZIndexOffset(1000);
+		return;
+	}
+	marker.setZIndexOffset(0);
 	if(marker.feature.properties.type == "Accident")
 		{
 			marker.setIcon(redIcon);
 	}else{
 		marker.setIcon(yellowIcon);
 	}
-})
-
-incidentsLayer.setGeoJSON(geojsonData);
-
-function markerHighlight(e){
-	var prop = this.feature.properties;
-	$('#mapdetails #name').text(prop.name);
-	$('#mapdetails #age').text(prop.age);
-	$('#mapdetails #race').text(prop.race);
-	$('#mapdetails #date').text(prop.date);
+	return;
 }
