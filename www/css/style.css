@@ -108,6 +108,13 @@
 
 #map{
 	position: relative;
+	height: 70vh;
+	width: 100%;
+}
+
+#mapbox{
+	height: 70vh;
+	width: 100%;
 }
 /*--------------------------wraparound----------*/
 .wraparound{
