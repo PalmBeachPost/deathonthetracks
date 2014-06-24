@@ -94,10 +94,12 @@
 	padding-bottom: 50px;
 }
 .split .notrail{
-	width: 55%;
 	margin-left: 31%;
 	padding-left: 2.5%;	
 	border-left: 1px dotted grey;
+}
+.notrail .story p {
+	width: 80%;
 }
 
 #mapdetails{		
