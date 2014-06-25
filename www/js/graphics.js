@@ -1,4 +1,8 @@
 $(function () {
+    Highcharts.setOptions({
+        //colors: ['#072542', '#D6D6D5', '#516171', '#081624', '#E3981B', '#507043','#7B6D89']
+        colors:['#334D5C','#45B29D','#EFC94C','#E27A3F','#DF4949','#df4949']
+    });
        var chart1= $('#graphic-1').highcharts({
             chart: {
                 type: 'column'
@@ -37,8 +41,8 @@ $(function () {
                             {                       
                             return x;
                             }
-                        }
-                    }
+                        }                        
+                    }                    
                 }
             },
             series: [            
