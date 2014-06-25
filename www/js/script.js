@@ -15,9 +15,11 @@ function calcLayout()
 	// calculate cover height
 	$bgheight=$(window).height()-0;
 	$('.cover').css('height', $bgheight+'px');
+	$creditHeight= $bgheight*.95;
+	$('#credits').css('top',$creditHeight+'px')
 
-	var tabWidth = ($('#graphics ul').width()/4)*.95;
-	$('#graphics li').css('width', tabWidth+'px');
+	/*var tabWidth = ($('#graphics ul').width()/4)*.95;
+	$('#graphics li').css('width', tabWidth+'px');*/
 }
 
 function MyHTML5Shiv()

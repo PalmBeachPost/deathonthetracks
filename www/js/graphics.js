@@ -8,7 +8,7 @@ $(function () {
                 type: 'column'
             },
             title: {
-                text: null
+                text: 'No. of deaths by track'
             },
             xAxis: {
                 categories: ['2008', '2009', '2010', '2011', '2012', '2013', '2014'],
@@ -53,14 +53,14 @@ $(function () {
             {
                 name: 'n/a',
                 data:[0,0,0,0,1,1,3]
+            },            
+            {
+                name: 'CSX',
+                data: [7,2,2,0,4,3,0]
             },
             {
                 name: 'FEC',
                 data: [6,7,5,7,5,6,1]
-            },
-            {
-                name: 'CSX',
-                data: [7,2,2,0,4,3,0]
             }
             ]
         });
@@ -68,11 +68,11 @@ $(function () {
       var chart2 =$('#graphic-2').highcharts({
             chart: {
                 plotBackgroundColor: null,
-                plotBorderWidth: 1,//null,
-                plotShadow: false
+                plotShadow: false,
+                borderWidth: 0
             },
             title: {
-                text: null
+                text: 'No. of deaths by location'
             },
             tooltip: {
                 pointFormat: '<b>{point.y}</b>'
@@ -83,11 +83,15 @@ $(function () {
                     cursor: 'pointer',
                     dataLabels: {
                         enabled: true,
-                        format: '<b>{point.name}</b>: {point.y}',
+                        format: '{point.y}',
+                        distance:-15,
+                        inside: true,
                         style: {
-                            color: 'black'
+                            color: 'white',
+                            fontWeight:'bold'
                         }
-                    }
+                    },
+                    showInLegend: true
                 }
             },
             series: [{
@@ -96,9 +100,9 @@ $(function () {
                 data: [
                     ['Crossing (Pedestrian)',11],
                     ['Crossing (Vehicle)',  7],
-                    ['Other',   3],
-                    ['Tracks',33],
-                    ['Unknown', 6]
+                    ['Other',   3],                    
+                    ['Unknown', 6],
+                    ['Tracks',33]
                 ]
             }]
         });
