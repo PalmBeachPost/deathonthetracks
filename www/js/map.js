@@ -13,11 +13,11 @@ var myIcon = L.Icon.extend({
 var areIconsGrey = false;
 
 //create three separate icons
-var redIcon = new myIcon({iconUrl: './img/red.png'});
-var yellowIcon = new myIcon({iconUrl: './img/yellow.png'});
-var greyIcon = new myIcon({iconUrl: './img/grey.png'});
+var redIcon = new myIcon({iconUrl: 'http://www2.palmbeachpost.com/projects/news/trains/img/red.png'});
+var yellowIcon = new myIcon({iconUrl: 'http://www2.palmbeachpost.com/projects/news/trains/img/yellow.png'});
+var greyIcon = new myIcon({iconUrl: 'http://www2.palmbeachpost.com/projects/news/trains/img/grey.png'});
 var highlightIcon = new myIcon(
-		{iconUrl: './img/highlight.png',
+		{iconUrl: 'http://www2.palmbeachpost.com/projects/news/trains/img/highlight.png',
 		 iconSize: [16,16],
 		 iconAnchor: [8,8]
 		})
@@ -112,10 +112,11 @@ function findScrollTargets(caseno){
 function setupScrollSpy(){	
 	var $scrollTriggers = [
 		{selector:"#eppsTrigger", caseno:"12-0251"},
-		{selector:"#heroTrigger",caseno:"09-1375"},
+		{selector:"#elanTrigger",caseno:"08-0606"},
 		{selector:"#vachonTrigger", caseno:"13-0493"},
 		{selector:"#septembreTrigger", caseno:"13-0631"},
-		{selector:"#torresTrigger", caseno:"11-0125"}
+		{selector:"#torresTrigger", caseno:"11-0125"},
+		{selector:"allenTrigger", caseno:"08-0485"}
 	];
 	_.each($scrollTriggers, function(element, index){
 		$(element.selector).on('scrollSpy:enter',function(){

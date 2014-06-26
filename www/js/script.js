@@ -26,17 +26,21 @@ function calcLayout()
 	if(skrollrInstance == null){
 		if($(window).width()>480)
 		{
-			skrollrInstance = skrollr.init();
-			if(map != null){
+			if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+				skrollrInstance = skrollr.init();
+				if(map != null){
 				map.dragging.enable();
+				}
 			}
 		}
 	}
 	else {
 		if($(window).width()<=480)
 		{
-			skrollrInstance.destroy();
-			skrollrInstance=null;
+			if(skrollrInstance!=null){
+				skrollrInstance.destroy();
+				skrollrInstance=null;
+			}
 			map.dragging.disable();
 		}
 	}
