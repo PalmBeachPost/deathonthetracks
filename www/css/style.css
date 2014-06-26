@@ -244,12 +244,10 @@ p.note{
 	.full{
 			width:90%;
 		}
-		.wraparound{
-			width: 90%;
-			margin: auto;
-		}
 		.left,.right{
 			float: none;
+			margin-right: 0px;
+			margin-left:0px;
 		}
 	/*------------HED---------*/	
 		#content-section #hed{
@@ -284,6 +282,44 @@ p.note{
 		#leonorimg {
 			margin-top: 1em;
 			margin-bottom: 1em;
+			max-width: 400px;
 		}
+		.wraparound{
+			width: 100%;
+			min-width: initial;
+		}
+		.caption{			
+			margin-bottom: 4%;
+		}
+	/*--------------Map-------------*/
+		.rail{
+			width:100%;
+			padding: 0;
+		}
+		.rail #map{
+			margin-left: -7%;
+		}
+
+		.split .notrail{
+			border: none;
+			width: 90%;
+			margin-left: -7%;
+		}
+
+		.notrail .story{
+			width: 100%;
+			text-align: justify;
+		}
+		.notrail .story h3{
+			text-align: left;
+			font-size: 1em;
+		}
+		.notrail .story p {
+			width: 100%;
+		}
+		.notrail .story p.note{
+			width: 90%;
+		}
+		
 	}
 }

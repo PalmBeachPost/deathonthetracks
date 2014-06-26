@@ -2,16 +2,28 @@ $(document).ready(function(){
 	$( "#graphics" ).tabs();
 	MedleyShiv();
 	MyHTML5Shiv();
+	skrollrInstance=null;
 	calcLayout();	
 	var throttledResize = _.throttle(calcLayout, 100);
 	$(window).resize(throttledResize);
-
-	skrollr.init();
+	
 	$('.carousel').carousel({ interval: false});
 });
 
 function calcLayout()
 {
+	if(skrollrInstance == null){
+		if($(window).width()>480)
+		{
+			skrollrInstance = skrollr.init();
+		}
+	}
+	else {
+		if($(window).width()<=480)
+		{
+			skrollrInstance.destroy();
+		}
+	}
 	// calculate cover height
 	$bgheight=$(window).height()-0;
 	$('.cover').css('height', $bgheight+'px');
@@ -20,8 +32,6 @@ function calcLayout()
 	$creditHeight= $bgheight-$('#credits').height();
 	$('#credits').css('top',$creditHeight+'px');
 
-	//calculate width of photo caption for leonor
-	//$('#leonorimg .caption').css('width',$('#leonorimg img').width()+'px');
 }
 
 function MyHTML5Shiv()
