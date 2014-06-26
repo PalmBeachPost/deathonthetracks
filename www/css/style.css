@@ -20,7 +20,7 @@
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-  	background-position: 30% 50%;
+  	background-position: 29% 50%;
 	height: 20vh;
 }
 
@@ -80,24 +80,31 @@
 	margin-top: 45px;	
 }
 .split{
-	width:100%;
+	width:90%;
 	position: relative;
+	margin-left:12.5%;
 }
 .left{
 	float: left;
+	margin-right: 24px;
 }
 .right{
 	float: right;
+	margin-left: 24px;
 }
+
 .rail {
 	width: 30%;
 	padding-right: 10px;
 	padding-bottom: 50px;
 }
 .split .notrail{
-	margin-left: 31%;
-	padding-left: 2.5%;	
+	margin-left: 31%;	
 	border-left: 1px dotted gray;
+}
+.notrail .story {
+	width: 87.5%;
+	margin-left: 0px;
 }
 .notrail .story p {
 	width: 80%;
@@ -115,7 +122,7 @@
 }
 
 #mapbox{
-	height:500px;
+	height:400px;
 	height: 70vh;
 	width: 100%;
 }
@@ -132,19 +139,26 @@
 	padding-left: 5px;
 	padding-bottom: 3px;
 }
-/*--------------------------wraparound----------*/
+/*--------------------------Imgs---------*/
 .wraparound{
 	width: 50%;
 	min-width: 300px;
 	margin-left: 24px;
 }
-.wraparound .caption{
+.caption{
 	text-align: justify;
 	color:#444444;	
 	min-height: 1em;
 	padding: .5em .5em;
 	font-size: .95em;
-	background-color: rgba(242,242,242,.8)
+	background-color: rgba(242,242,242,.8);	
+}
+#leonorimg{
+	max-width: 200px;
+}
+#leonorimg img{
+	max-width: 280px;
+	min-width: 100%;
 }
 
 /*---------------------------------Graphics------------------------*/
@@ -225,9 +239,51 @@ p.note{
 
 /*-------------------------------MEDIA QUERIES----------------------*/
 
-@media (max-device-width : 480px) {
-	#content-section #hed,#content-section #credits{
-		width: 100%;
-		right: 0%;
+@media only screen  and  (max-width : 480px) {
+	/*----------general----*/
+	.full{
+			width:90%;
+		}
+		.wraparound{
+			width: 90%;
+			margin: auto;
+		}
+		.left,.right{
+			float: none;
+		}
+	/*------------HED---------*/	
+		#content-section #hed{
+			width: 100%;
+			right: 0;
+		}
+		#content-section #credits{
+			width: 100%;
+			text-align: center;
+			right: 0;
+		}
+
+		#hed h1{
+			font-size: 3em;
+		}
+
+		#hed h3{
+			font-size: 1em;
+		}
+
+		#credits h5{
+			font-size: .75em;
+		}
+	/*-----------img-----------*/	
+		#leonorimg img, #leonorimg .caption{
+		width: 250px;
+		height: auto;
+		text-align: left;
+		overflow: hidden;
+		}
+		
+		#leonorimg {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
 	}
 }
