@@ -24,14 +24,14 @@
 	height: 20vh;
 }
 
-#content-section #hed {
+.content-section #hed {
 	color: white;	
 	display: inline;
 	position: absolute;
 	top:65%;
 	right: 5%;
 }
-#content-section #hed>*{
+.content-section #hed>*{
 	background-color: rgba(100,100,100,.5);
 	font-weight: normal;
 	max-width: 550px;
@@ -43,7 +43,7 @@
 	font-style: italic;
 	font-weight: lighter;
 }
-#content-section #credits {
+.content-section #credits {
 	background-color: rgba(100,100,100,.5);
 	color: black;	
 	display: inline;
@@ -95,7 +95,6 @@
 
 .rail {
 	width: 30%;
-	padding-right: 10px;
 	padding-bottom: 50px;
 }
 .split .notrail{
@@ -112,8 +111,11 @@
 
 #mapdetails{		
 	padding-top: 30px;
+	padding-right: 5px;
 	margin-bottom: 10px;
 	text-align: right;
+	font-family: "Courier New", Courier, monospace;
+	background-color: #FAFAED;
 }
 
 #map{
@@ -130,6 +132,7 @@
 #legend {
 	list-style: none;
 	float: right;
+	background-color: #FAFAED;
 }
 #legend li{
 	display: inline;
@@ -154,57 +157,10 @@
 	background-color: rgba(242,242,242,.8);	
 }
 #leonorimg{
-	max-width: 200px;
+	max-width: 250px;
 }
 #leonorimg img{
-	max-width: 280px;
 	min-width: 100%;
-}
-
-/*---------------------------------Graphics------------------------*/
-#graphics{	
-	margin: auto;
-	border: none;
-	border-radius: none;
-	padding-top: 1em;
-}
-#graphics ul {
-	width: 75%;
-	margin:auto;
-}
-
-#graphics ul li{
-	list-style: none;
-	float: left;		
-	background-image: none;
-}
-
-#graphics li a{
-	color: #004c8c;
-}
-
-#graphics .ui-widget-header{
-	background: none;
-	border: none;
-	border-bottom: 1px solid  #004c8c;
-}
-
-#graphics .ui-corner-all,
-#graphics .ui-corner-top,
-#graphics .ui-corner-left,
-#graphics .ui-corner-tl{
-	border-radius: 0px;
-}
-#graphicshed{
-	text-align: center;
-	font-weight: normal;
-}
-
-#graphicssubhed{
-	font-style: italic;
-	text-align: center;
-	font-weight: normal;
-	padding-bottom: .5em;
 }
 /*-------------------notes------------------------------------------*/
 p.note{
@@ -242,84 +198,87 @@ p.note{
 @media only screen  and  (max-width : 480px) {
 	/*----------general----*/
 	.full{
-			width:90%;
-		}
-		.left,.right{
-			float: none;
-			margin-right: 0px;
-			margin-left:0px;
-		}
-	/*------------HED---------*/	
-		#content-section #hed{
-			width: 100%;
-			right: 0;
-		}
-		#content-section #credits{
-			width: 100%;
-			text-align: center;
-			right: 0;
-		}
-
-		#hed h1{
-			font-size: 3em;
-		}
-
-		#hed h3{
-			font-size: 1em;
-		}
-
-		#credits h5{
-			font-size: .75em;
-		}
-	/*-----------img-----------*/	
-		#leonorimg img, #leonorimg .caption{
-		width: 250px;
-		height: auto;
-		text-align: left;
-		overflow: hidden;
-		}
-		
-		#leonorimg {
-			margin-top: 1em;
-			margin-bottom: 1em;
-			max-width: 400px;
-		}
-		.wraparound{
-			width: 100%;
-			min-width: initial;
-		}
-		.caption{			
-			margin-bottom: 4%;
-		}
-	/*--------------Map-------------*/
-		.rail{
-			width:100%;
-			padding: 0;
-		}
-		.rail #map{
-			margin-left: -7%;
-		}
-
-		.split .notrail{
-			border: none;
-			width: 90%;
-			margin-left: -7%;
-		}
-
-		.notrail .story{
-			width: 100%;
-			text-align: justify;
-		}
-		.notrail .story h3{
-			text-align: left;
-			font-size: 1em;
-		}
-		.notrail .story p {
-			width: 100%;
-		}
-		.notrail .story p.note{
-			width: 90%;
-		}
-		
+		width:90%;
 	}
+	.left,.right{
+		float: none;
+		margin-right: 0px;
+		margin-left:0px;
+	}
+/*------------HED---------*/	
+	.content-section #hed{
+		width: 100%;
+		right: 0;
+	}
+	.content-section #credits{
+		width: 100%;
+		text-align: center;
+		right: 0;
+	}
+
+	#hed h1{
+		font-size: 3em;
+	}
+
+	#hed h3{
+		font-size: 1em;
+	}
+
+	#credits h5{
+		font-size: .75em;
+	}
+/*-----------img-----------*/	
+	#leonorimg {
+		max-width: initial;
+		overflow: hidden;
+	}
+	.wraparound{
+		width: 100%;
+		min-width: initial;
+	}
+	.caption{			
+		margin-bottom: 4%;
+	}
+/*--------------Map-------------*/
+	.rail{
+		width:100%;
+		padding: 0;
+	}
+	.rail #map{
+		margin-left: -7%;
+	}
+
+	.split .notrail{
+		border: none;
+		width: 90%;
+		margin-left: -7%;
+	}
+
+	.notrail .story{
+		width: 100%;
+		text-align: justify;
+	}
+	.notrail .story h3{
+		text-align: left;
+		font-size: 1.5em;
+	}
+	.notrail .story p {
+		width: 100%;
+	}
+	.notrail .story p.note{
+		width: 90%;
+	}
+	#mapdetails{
+		text-align: left;
+	}
+	#mapbox{
+		height:50vh;
+	}
+	/*------------------carousel------------*/
+	.carousel-control{
+		top: 25%;
+		left: 10px;
+		width: initial;
+	}
+		
 }

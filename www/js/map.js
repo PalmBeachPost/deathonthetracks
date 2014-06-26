@@ -58,9 +58,11 @@ function updateMarkerAndInfo(marker){
 	setIncidentIcon(marker,true)
 	var prop = marker.feature.properties;
 	$('#mapdetails #name').text(prop.name);
-	$('#mapdetails #age').text(prop.age);
-	$('#mapdetails #race').text(prop.race);
-	$('#mapdetails #date').text(prop.date);
+	var $race = prop.race == "W" ? "white":"black";
+	var $gender = prop.sex =="M"? " man":" woman";
+	var $desc = prop.age+"-year-old "+$race+$gender;
+	$('#mapdetails #desc').text($desc);
+	$('#mapdetails #date').text("Date of incident: "+prop.date);
 }
 
 function setIncidentIcon(marker, ishighlight){

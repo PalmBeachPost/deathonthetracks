@@ -1,36 +1,45 @@
-$(document).ready(function(){
-	$( "#graphics" ).tabs();
+$(document).ready(function(){	
 	MedleyShiv();
 	MyHTML5Shiv();
 	skrollrInstance=null;
 	calcLayout();	
-	var throttledResize = _.throttle(calcLayout, 100);
-	$(window).resize(throttledResize);
-	
 	$('.carousel').carousel({ interval: false});
+
+	var throttledResize = _.throttle(calcLayout, 100);
+	$(window).resize(throttledResize);	
 });
 
 function calcLayout()
 {
+	// calculate cover height
+	$bgheight=$(window).height()*.9-0;
+	$('.cover').css('height', $bgheight+'px');
+
+	//calculate where to place photo credits
+	$creditHeight= $bgheight-$('#credits').height();
+	$('#credits').css('top',$creditHeight+'px');
+
+	var $mapheight= Math.floor($(window).height()/2)+'px';
+	$('#mapbox').css('height',$mapheight);
+
+	//This has to happen here because small screens dont have skrollr effects
 	if(skrollrInstance == null){
 		if($(window).width()>480)
 		{
 			skrollrInstance = skrollr.init();
+			if(map != null){
+				map.dragging.enable();
+			}
 		}
 	}
 	else {
 		if($(window).width()<=480)
 		{
 			skrollrInstance.destroy();
+			skrollrInstance=null;
+			map.dragging.disable();
 		}
 	}
-	// calculate cover height
-	$bgheight=$(window).height()-0;
-	$('.cover').css('height', $bgheight+'px');
-
-	//calculate where to place photo credits
-	$creditHeight= $bgheight-$('#credits').height();
-	$('#credits').css('top',$creditHeight+'px');
 
 }
 

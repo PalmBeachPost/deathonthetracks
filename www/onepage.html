@@ -47,7 +47,7 @@
 		//AddCss('http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css','');
 		AddCss('https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css','');
 	</script>
-	<div id="content-section">
+	<div id="skrollr-body" class="content-section">
 		<!-- <div id="undernav" class="spacer"></div> -->
 		<div class="cover">
 			<span id="hed">
@@ -75,17 +75,18 @@
 				<p>Bob Pottroff, who has litigated against rail companies for decades,  says they&rsquo;re at least partly to blame for the deaths.</p>
 				<p>&ldquo;Imagine if the electrical transmission people just started laying their lines on the ground and put up signs, &lsquo;Just don&rsquo;t walk over them,&rsquo;&rdquo; he said.</p>
 			</div>
-			<div class="split">
+			<div id= "skrollr-body" class="split">
 				<div class="left rail">
-					<div id="map">													
+					<div id="map">															
 						<div id="mapbox"></div>
 						<ul id="legend">
 								<li><img src="./img/red.png" width="10px"/>Accident</li>
 								<li><img src="./img/yellow.png" width="10px"/>Suicide</li>
-						</ul>
+						</ul>		
 						<div id="mapdetails">							
-							<h4 id="name">Leonor Rahas de la Cuervo</h4>
-							<p>Age: <span id="age">52</span>| Race: <span id="race">White</span>| Date of incident: <span id="date">4/25/2012</span></p>
+							<h4 id="name"></h4>
+							<p id="desc"></p>
+							<p id="date"></p>
 						</div>	
 					</div>
 				</div>
@@ -114,7 +115,7 @@
 						<p class="note" id="eppsTrigger">In 2003, Tyrone Epps got a ticket for trespassing on the CSX tracks. Nine years later and a mile to the southeast, he died using a well-worn footpath to get home. As the southbound freight train came around a curve, the engineer saw Epps and began braking and blew the whistle. Epps didn&rsquo;t react.
 						<span> &mdash; </span>Medical Examiner report 12-0251 and West Palm Beach Police Department report 03-14030, condensed</p>
 						<p>In XX minutes, XX people crossed the footpath where XXXXX died. It was around 6 p.m. on a Friday, and many of them said they were going home from the bus stop.</p>
-						<div id="graphic-2" class="wraparound right"></div>
+						<div id="graphic-2" class="graphic wraparound right"></div>
 						<p>&ldquo;QUOTE,&rdquo; said person crossing the tracks.</p>
 						<p><span id="footpath" class="tooltipItem" href="#">Footpaths</span> dot the FEC corridor in Palm Beach County. Four of them stand out along the 3/4-mile stretch between railroad crossings in Boca Raton where Cuervo died. Scattered on satellite images like  scars from Boca Raton to Jupiter, the paths radiate from bus stops, connect dead-end streets and lead to schools near the tracks.</p>
 
@@ -126,7 +127,7 @@
 						<h3>FEC rejects fencing</h3>
 						<p class="note" id="heroTrigger">Moreaut Hero, 39, stabbed twice, was trying to beat a freight train just north of a crossing in Boynton Beach, but didn&rsquo;t make it. A clearly defined footpath connects one dead-end side street to another near where he died. Homes flank the rail line.<span> &mdash;Medical Examiner report 09-1375</span></p>
 						<p>///Experts say fencing is the best way to prevent people from going on the tracks, and thus the best way to prevent casualties.</p>
-						<div id="graphic-1" class="wraparound right"></div>
+						<div id="graphic-1" class="graphic wraparound right"></div>
 						<p>The Tri-Rail tracks got 3,000 feet of new fencing in the past two years, installed by the Florida Department of Transportation. The department, which bought  the tracks in 1988  for Tri-Rail, constantly evaluates the need for  fencing, a spokesman said.</p>
 						<p>But not the FEC.</p>
 						<p></p>
@@ -221,8 +222,6 @@
 			<div id="section-9" class="full story">
 				<p>But installing fences all along the corridor is not necessary, Pottroff said. In many cases, only 50 or 100 feet might be necessary to block access points between residential communities that installed their own walls or fences.</p>
 				<p>Four cities &ndash; Boca Raton, Delray Beach, Boynton Beach and Lake Worth &ndash; said they don&rsquo;t install fencing. West Palm Beach deferred to the railroads.</p>
-			</div>		
-			<div id="section-9" class="full story">
 				<p>&ldquo;The railroads handle the security on their properties,&rdquo; wrote city spokesman Elliot Cohen. &ldquo;We are going to pass on commenting.&rdquo;</p>
 				<p>Pottroff said that ultimately the FEC needs to cooperate with local landowners to figure out the best solutions for any given community, whether it&rsquo;s fencing or a pedestrian crossing.</p>
 				<p>If All Aboard Florida is approved without additional safety measures for pedestrians, more will die, he said.</p>
@@ -252,7 +251,7 @@
 	<!--scrollspy-->	
 	<script type="text/javascript" src="./js/scrollspy.js"></script>
 
-	<script type="text/javascript" src="./js/graphics.js"></script>
+	<script type="text/javascript" src="./js/graphics.js"></script>		
 	<script type="text/javascript" src="./js/script.js"></script>
 	<script type="text/javascript" src="./js/map.js"></script>
   </body>
