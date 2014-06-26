@@ -11,6 +11,8 @@
 	width: 100%;
 }
 
+
+
 /*----------------------------cover----------------------*/
 
 .cover{
@@ -28,7 +30,7 @@
 	color: white;	
 	display: inline;
 	position: absolute;
-	top:65%;
+	top:55%;
 	right: 5%;
 }
 .content-section #hed>*{
@@ -58,12 +60,24 @@
 	font-style: normal;
 	font-weight: lighter;
 }
+
+#covercred{
+	background-color: rgba(100,100,100,.2);
+	display: inline;
+	font-size: 1em;
+	padding-right: 2px;
+	padding-left: 2px;
+	padding-bottom: 2px;
+}
 /*-------------------------story------------------------*/
 #story-section{
 	width:90%;
 	margin: auto;	
 	text-align: justify;
 	margin-top: 50px;
+}
+.bold{
+	font-weight: bold;
 }
 #story-section section{
 	padding-top: 20px;
@@ -113,9 +127,12 @@
 	padding-top: 30px;
 	padding-right: 5px;
 	margin-bottom: 10px;
-	text-align: right;
-	font-family: "Courier New", Courier, monospace;
+	text-align: right;	
 	background-color: #FAFAED;
+}
+#mapdetails #personname{
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
 #map{
@@ -142,6 +159,10 @@
 	padding-left: 5px;
 	padding-bottom: 3px;
 }
+.mapbox-improve-map{
+	display: none;
+}
+
 /*--------------------------Imgs---------*/
 .wraparound{
 	width: 50%;
@@ -227,6 +248,10 @@ p.note{
 	#credits h5{
 		font-size: .75em;
 	}
+
+	#covercred{
+		display: none;
+	}
 /*-----------img-----------*/	
 	#leonorimg {
 		max-width: initial;
@@ -281,4 +306,15 @@ p.note{
 		width: initial;
 	}
 		
+}
+@media only screen  and  (min-width : 768px){
+	.mastfoot, #product-bar{
+	width: 75%;
+	margin: auto;
+	margin-left: 12.5%;
+	}
+
+	#hed h1{
+		font-size: 3em;
+	}
 }

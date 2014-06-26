@@ -47,20 +47,20 @@ $(function () {
             },
             series: [            
             {
-                name: 'Sugar Corp.',
+                name: 'SCFE-freight',
                 data: [0,0,0,0,1,0,0]
             },
             {
-                name: 'n/a',
-                data:[0,0,0,0,1,1,3]
+                name: 'Not available',
+                data:[0,0,0,0,0,1,2]
             },            
             {
-                name: 'CSX',
-                data: [7,2,2,0,4,3,0]
+                name: 'CSX-Tri-Rail',
+                data: [7,2,2,0,5,3,0]
             },
             {
                 name: 'FEC',
-                data: [6,7,5,7,5,6,1]
+                data: [6,7,5,7,5,6,2]
             }
             ]
         });
@@ -98,84 +98,13 @@ $(function () {
                 type: 'pie',
                 name: '',
                 data: [
-                    ['Crossing (Pedestrian)',11],
-                    ['Crossing (Vehicle)',  7],
-                    ['Other',   3],                    
-                    ['Unknown', 6],
-                    ['Tracks',33]
+                    ['Crossing-Pedestrian',10],
+                    ['Crossing-Vehicle', 8],
+                    ['Jumped from train', 3],                    
+                    ['Not available', 6],
+                    ['Between crossings',33]
                 ]
             }]
         });
-        
-       var chart3 = $('#graphic-3').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: 1,
-            plotShadow: false
-        },
-        title: {
-            text: null
-        },
-        tooltip: {
-            pointFormat: '<b>{point.y}</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.y}',
-                    style: {
-                        color: 'black'
-                    }
-                }
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: '',
-            data: [
-                ['White',   41],
-                ['Black',   20]
-            ]
-        }]
-    });
-    var chart4=$('#graphic-4').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: 1,//null,
-            plotShadow: false
-        },
-        title: {
-            text: null
-        },
-        tooltip: {
-            pointFormat: '<b>{point.y}</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.y}',
-                    style: {
-                        color: 'black'
-                    }
-                }
-            }
-        },
-        series: [{
-            type: 'pie',
-            name: '',
-            data: [
-                ['Male',   53],
-                ['Female', 8]
-            ]
-        }]
-    });
-
-
 
 });

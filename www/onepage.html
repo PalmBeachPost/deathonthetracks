@@ -41,8 +41,8 @@
 		    head.appendChild(link);	
 		}
 		//Add you external css files here 
-		//var path = './css/';
-		var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
+		var path = './css/';
+		//var path= 'http://www2.palmbeachpost.com/projects/news/trains/css/'
 		AddCss(path,'style.css');
 		AddCss('https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css','');
 	</script>
@@ -53,16 +53,15 @@
 				<h1>Death on the tracks</h1>
 				<h3>By Fedor Zarkhin</h3>
 			</span>
-			<span id="credits">				
-				<h5>Photo by: Damon Higgins / The Palm Beach Post</h5>
-			</span>
 		</div>
+		<p id="covercred"> Andrea Cuervo, left, her father Jorge Cuervo, and Luisa Cuervo stand next to the FEC train tracks where their loved one Leonor Cuervo was killed two years ago.(Damon Higgins / The Palm Beach Post)</p>
 		<div id="story-section">
 			<div id="section-1" class="full story">
+				<h3>Possible hed?</h3>
 				<p>By all accounts, Leonor Cuervo was not suicidal. Her husband and daughters can only guess why she was hit by a train a few hundred feet from her Boca Raton home.</p>
 				<div id="leonorimg" class="right">
 					<img src="http://media.cmgdigital.com/shared/img/photos/2014/06/26/b9/2b/cuervo.jpg"/>
-					<div class="caption">Let us try to keep this caption short. it would be best if it doesnt exceed two lines on a big screen</div>							
+					<div class="caption"><span class="bold">Killed in 2012</span>: Leonor Cuervo.</div>							
 				</div>	
 				<p>But the fact that the Colombia native was crossing the Florida East Coast Railway tracks in the first place is something the company could have prevented, asserts her daughter, Andrea. No fence or signs stopped her as she followed a makeshift footpath across the tracks to get from a bus stop to her home.</p>
 				<p>Of 61 deaths on all train tracks in Palm Beach County since 2008, 45 were pedestrians, a Palm Beach Post analysis of medical examiner reports show. A fifth of the state&rsquo;s reported pedestrian rail deaths in 2012 were in Palm Beach County, the most of any Florida county that year.</p>
@@ -88,7 +87,7 @@
 								</li>
 						</ul>		
 						<div id="mapdetails">							
-							<h4 id="name"></h4>
+							<p id="personname"></p>
 							<p id="desc"></p>
 							<p id="date"></p>
 						</div>	
@@ -97,10 +96,10 @@
 				<div id="mapbuddy" class="notrail">						
 					<div id="section-3" class="story">
 						<h3>Tracks easy to cross</h3>
-						<p class="note" id="cuervoTrigger">Cuervo&rsquo;s brown slip-on shoes and a prescription bottle were found about 75 feet north of where the train hit her in April 2012. The train engineer said Cuervo was standing at the edge of the tracks, where Southwest 15th Street dead-ends at the FEC track in Boca Raton, looking at something in her hands. She didn&rsquo;t react when he blew the whistle. <span>&mdash; Medical examiner report 12-0437, condensed.</span></p>
+						<p class="note" id="cuervoTrigger">Cuervo&rsquo;s brown slip-on shoes and a prescription bottle were found about 75 feet north of where the train hit her in April 2012. The train engineer said Cuervo was standing at the edge of the tracks, where Southwest 15th Street dead-ends at the FEC track in Boca Raton, looking at something in her hands. She didn&rsquo;t react when he blew the whistle. <span>&mdash; Medical examiner report 12-0437.</span></p>
 						<div class="wraparound right">
 							<img src="http://media.cmgdigital.com/shared/img/photos/2014/06/26/64/ac/TRAIN-DEATHS-1.jpg"/>
-							<div class="caption">The Cuervo Family (l-r) daughter Andrea, 19, Father Jorge, 51, and daughter Luisa, 24, stand next to the train tracks May 28, 2014, where the family's mother Leonor Cuervo, was killed 2 years ago by a train when coming home from work. The family said Cuervo had gotten off a bus on Dixie Highway and proceeded to cross the tracks and pass through a footpath to her apartment complex when she was killed.  (Damon Higgins / The Palm Beach Post)</div>							
+							<div class="caption">Andrea Cuervo, 19, left, her father Jorge Cuervo, 51, and sister Luisa Cuervo, 24, stand next to the FEC train tracks where Leonor Cuervo was killed 2 years ago by a train when coming home from work.(Damon Higgins / The Palm Beach Post)</div>							
 						</div>
 						<p>At least twice a day, Jorge Cuervo uses the footpath his wife died on.</p>
 						<p>His two daughters say they don&rsquo;t understand why two years after their mother&rsquo;s death, nothing prevents their father &mdash; and their neighbors &mdash; from freely crossing the tracks. People use the footpath all the time, they say. And it&rsquo;s easy to understand why: The path cuts a mile off the trip from their neighborhood to nearby stores and bus stops.</p>
@@ -119,16 +118,16 @@
 						<h3>Trespassing an &lsquo;epidemic&rsquo; </h3>
 						<p class="note" id="eppsTrigger">In 2003, Tyrone Epps got a ticket for trespassing on the CSX tracks. Nine years later and a mile to the southeast, he died using a well-worn footpath to get home, at the border between West Palm Beach and Riviera Beach on a March evening in 2012. As the southbound freight train came around a curve, the engineer saw Epps and began braking and blew the whistle. Epps didn&rsquo;t react.
 						<span>  &mdash; Medical examiner report 12-0251 and West Palm Beach police report 03-14030.</span></p>
-						<div id="graphic-2" class="graphic wraparound right"></div>
-						<p><span id="footpath" class="tooltipItem" href="#">Footpaths</span> dot the FEC corridor in Palm Beach County.</p>						
-						<p>Scattered on satellite images like little scars from Boca Raton to Jupiter, the paths radiate from bus stops, connect dead-end streets and provide shortcuts to school. Four of them stand out along the 3/4-mile stretch between crossings at West Camino Real and Southwest 18th Street where Cuervo died.</p>
+						
+						<p>Footpaths dot the FEC corridor in Palm Beach County.</p>						
+						<p>Scattered on satellite images like little scars from Boca Raton to Jupiter,<div id="graphic-2" class="graphic wraparound right"></div> the paths radiate from bus stops, connect dead-end streets and provide shortcuts to school. Four of them stand out along the 3/4-mile stretch between crossings at West Camino Real and Southwest 18th Street where Cuervo died.</p>						
 						<p>The Federal Railroad Administration in 2008 chose West Palm Beach as a case study for trespasser prevention after noting that four of the deaths that year were on a 1.75-mile stretch of Tri-Rail tracks, which are west of the FEC line.</p>
 						<p>Federal researchers saw trespassers and footpaths at 32 places on a 5-mile stretch of FEC tracks in West Palm Beach. In one location, they saw 15 people cross in less than half an hour, most of them children and teenagers.</p>
 						<p>In a separate study prompted by All Aboard Florida, a Federal Railroad Administration engineer wrote that trespassing was an &ldquo;epidemic&rdquo; along the FEC corridor.</p>
 					</div>
 					<div id="section-5" class="story">
 						<h3>FEC rejects fencing</h3>
-						<p class="note" id="heroTrigger">The 37-year-old woman, talking on her cell phone, kept approaching the FEC tracks at Lakeview Avenue in Lantana, seemingly oblivious to the train whistle. At 10:52 a.m. on May 23, 2008, Marie Elan was killed by an 81-car freight train, about a year after she emigrated from Haiti. She had left her house an hour earlier to buy groceries, her family said.<span>&mdash; Medical examiner report 08-0606</span></p>
+						<p class="note" id="elanTrigger">The 37-year-old woman, talking on her cell phone, kept approaching the FEC tracks at Lakeview Avenue in Lantana, seemingly oblivious to the train whistle. At 10:52 a.m. on May 23, 2008, Marie Elan was killed by an 81-car freight train, about a year after she emigrated from Haiti. She had left her house an hour earlier to buy groceries, her family said.<span>&mdash; Medical examiner report 08-0606</span></p>
 						<p>The CSX tracks that Tri-Rail uses got 3,340 feet of new fencing in the past two years, installed by the Florida Department of Transportation. The department, which bought the tracks in 1988 for Tri-Rail, constantly evaluates the need for fencing, a spokesman said.</p>
 						<p>But not the FEC.</p>						
 						<div id="graphic-1" class="graphic wraparound right"></div>
@@ -139,10 +138,15 @@
 						<p>He even turns his opponents&rsquo; arguments on them: Fences could disrupt people&rsquo;s lives by blocking paths they use every day.</p>
 						<!--SLIDESHOW-->
 						<div id="earthell-slideshow" class="carousel slide wraparound right">
-							<div class="carousel-inner">
-								<div class="item active">
+							<h3>Slideshow</h3>
+							<div class="carousel-inner">								
+      							<div class="item active">
+      								<img src="http://media.cmgdigital.com/shared/img/photos/2014/06/26/ef/bc/20140603-met-train-deaths-04.jpg" \>
+      								<div class="caption">Earthell Allen in 2008.</div>
+      							</div>
+								<div class="item">
       								<img src="http://media.cmgdigital.com/shared/img/photos/2014/06/26/23/d9/20140603-met-train-deaths-01.jpg" \>
-      								<div class="caption">Melanie Allen's 15-year old son Earthell was hit by a train in 2008. "He was such a lovely child," she said. She was photographed at home in West Palm Beach Tuesday, June 3, 2014 with a framed poem written by Earthell on the day of his death. "It was a tragedy, and so hard to get past," she said. (Bruce R. Bennett / The Palm Beach Post)</div>
+      								<div class="caption">Melanie Allen's 15 year old son Earthell was hit by a train in 2008. "He was such a lovely child," she said. She was photographed with a framed poem written by Earthell on the day of his death. "It was a tragedy, and so hard to get past," she said. (Bruce R. Bennett / The Palm Beach Post)</div>
       							</div>
       							<div class="item">
       								<img src="http://media.cmgdigital.com/shared/img/photos/2014/06/26/9a/a6/20140603-met-train-deaths-02.jpg" \>
@@ -151,10 +155,6 @@
       							<div class="item">
       								<img src="http://media.cmgdigital.com/shared/img/photos/2014/06/26/63/11/20140603-met-train-deaths-03.jpg" \>
       								<div class="caption">Melanie Allen's 15-year old son Earthell was hit by a train in 2008. "He was such a lovely child," she said. She was photographed at home in West Palm Beach Tuesday, June 3, 2014 with a framed poem written by Earthell on the day of his death. "It was a tragedy, and so hard to get past," she said. (Bruce R. Bennett / The Palm Beach Post)</div>
-      							</div>
-      							<div class="item">
-      								<img src="http://media.cmgdigital.com/shared/img/photos/2014/06/26/ef/bc/20140603-met-train-deaths-04.jpg" \>
-      								<div class="caption">Earthell Allen in 2008.</div>
       							</div>
       							<div class="item">
       								<img src="http://media.cmgdigital.com/shared/img/photos/2014/06/26/d0/66/20140603-met-train-deaths-05.jpg" \>
@@ -175,7 +175,7 @@
 						<p>If the CSX tracks are any example, it seems that people determined to cross will do so: There are at least eight holes in the state-installed fencing along an eight-block stretch of the Tri-Rail corridor in West Palm Beach.</p>
 						<p>There&rsquo;s one gated pedestrian crossing on the FEC tracks in West Palm Beach, Ledoux said.</p>
 						<p>Despite the challenges in fencing train tracks, the state appears to view it as a way to prevent pedestrian deaths.</p>
-						<p>Earthell Allen, 15, was on his way to a friend&rsquo;s house in April 2008 after stopping to buy cookies at King Food on 36th Street west of the CSX tracks in West Palm Beach. Between his friend&rsquo;s home and the store, a footpath took him across two sets of tracks. Allen, accompanied by his pet dog, Angel, waited on the footpath for one train to pass, but moved forward, seemingly oblivious to an oncoming train. The engineer said he saw Allen try to jump backward off the track before he was hit. Both Allen and the dog, a bichon frise, were killed.</p>
+						<p id="allenTrigger">Earthell Allen, 15, was on his way to a friend&rsquo;s house in April 2008 after stopping to buy cookies at King Food on 36th Street west of the CSX tracks in West Palm Beach. Between his friend&rsquo;s home and the store, a footpath took him across two sets of tracks. Allen, accompanied by his pet dog, Angel, waited on the footpath for one train to pass, but moved forward, seemingly oblivious to an oncoming train. The engineer said he saw Allen try to jump backward off the track before he was hit. Both Allen and the dog, a bichon frise, were killed.</p>
 						<p>An avid basketball fan, Allen was wearing socks with the NBA logo when he died.</p>
 						<p>FDOT put in a work order to build a fence on 36th Street three months after Allen died, department spokesman Chuck McGinness said.</p>
 					</div>
@@ -195,7 +195,7 @@
 					</div>
 					<div id="section-7" class="story">
 						<h3>Suicides preventable</h3>
-						<p class="note" id="septembreTrigger">Late at night on June 7, 2013, Charslie Septembre, 17, ran out of the bushes into the path of a freight train, just south of where West Camino Real crosses the FEC track in Boca Raton. She ran out from the bushes by the track into the path of the train. The day before, she had an argument with her parents after she was caught with her boyfriend in a community pool bathroom.<span>&mdash; Medical Examiner report 13-0631, condensed.</span></p>
+						<p class="note" id="septembreTrigger">Late at night on June 7, 2013, Charslie Septembre, 17, ran out of the bushes into the path of a freight train, just south of where West Camino Real crosses the FEC track in Boca Raton. She ran out from the bushes by the track into the path of the train. The day before, she had an argument with her parents after she was caught with her boyfriend in a community pool bathroom.<span>&mdash; Medical Examiner report 13-0631.</span></p>
 						<p>Just over a third .of the deaths on Palm Beach County&rsquo;s tracks were suicides.</p>
 						<p>The homeless man with no next of kin. The 89-year-old woman perpetually worried about her health. The man who stood in front of a train half a block away from his home. Twenty-four since 2008, one of which was less than 500 feet from the spot where Leonor Cuervo died.</p>
 						<p>Though some city officials claim suicidal people can go to crossings to kill themselves if there&rsquo;s a fence, research shows that wouldn&rsquo;t necessarily happen.</p>
@@ -205,7 +205,7 @@
 					</div>
 					<div id="section-8" class="story">
 						<h3>Barriers hard to get</h3>
-						<p class="note" id="torresTrigger">After going out with his friends in downtown Delray Beach on a February night in 2011, Reynaldo Torres, 25, was standing too close to the tracks as the freight train approached. The conductor and engineer said they saw four or five people cross, but Torres stopped and motioned to someone on the other side. He was sent &ldquo;flying&rdquo; by the train. Two years earlier, a homeless man committed suicide mere feet away from where Torres died.<span>&mdash; Medical Examiner reports 11-0125 and 09-0687, condensed.</span></p>
+						<p class="note" id="torresTrigger">After going out with his friends in downtown Delray Beach on a February night in 2011, Reynaldo Torres, 25, was standing too close to the tracks as the freight train approached. The conductor and engineer said they saw four or five people cross, but Torres stopped and motioned to someone on the other side. He was sent &ldquo;flying&rdquo; by the train. Two years earlier, a homeless man committed suicide mere feet away from where Torres died.<span>&mdash; Medical Examiner reports 11-0125 and 09-0687.</span></p>
 						<p>While 10 percent of the FEC corridor is fenced, the FEC didn&rsquo;t erect those fences, Ledoux said. Businesses and other neighbors did.</p>
 						<p>Cities say they don&rsquo;t install fencing to protect pedestrians because it&rsquo;s not practical or their responsibility.</p>
 						<p>In most cases, cities would have to lease land from FEC to install fencing &mdash; at a potentially large cost.</p>
@@ -230,7 +230,7 @@
 	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 	<!--Bootstrap carousel-->
-	<script src="./js/carousel.js"></script>
+	<script src="http://www2.palmbeachpost.com/projects/news/trains/js/carousel.js"></script>
 
 	<!--Underscore-->
 	<script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
@@ -245,9 +245,9 @@
 	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
 
 	<!--scrollspy-->	
-	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains//js/scrollspy.js"></script>
+	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains/js/scrollspy.js"></script>
 
-	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains//js/graphics.js"></script>		
-	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains//js/script.js"></script>
-	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains//js/map.js"></script>
+	<script type="text/javascript" src="./js/graphics.js"></script>		
+	<script type="text/javascript" src="http://www2.palmbeachpost.com/projects/news/trains/js/script.js"></script>
+	<script type="text/javascript" src="./js/map.js"></script>
   </body>
