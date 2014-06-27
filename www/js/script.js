@@ -3,13 +3,23 @@ $(document).ready(function(){
 	MyHTML5Shiv();
 	skrollrInstance=null;
 	calcLayout();	
-	loadMap();
+	$('.carousel').carousel({ interval: false});		
 	loadGraphics();	
-	$('.carousel').carousel({ interval: false});
 	//calcLayout();
 
 	var throttledResize = _.throttle(calcLayout, 100);
 	$(window).resize(throttledResize);	
+	try{
+		if((/Firefox/i).test(navigator.userAgent)){
+			au = 1;
+			console.log("au set to "+au);
+		}
+		loadMap();
+	}
+	catch(err){
+		$('#mapbox').html("<img src='http://media.cmgdigital.com/shared/img/photos/2014/06/27/45/08/mapcover.jpg'/>");
+		console.log("maperror: "+err);
+	}
 });
 
 function calcLayout()
@@ -45,6 +55,7 @@ function calcLayout()
 			}			
 		}
 	}
+
 
 }
 
