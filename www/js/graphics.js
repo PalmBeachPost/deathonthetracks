@@ -101,7 +101,7 @@ $(function () {
                     ['Crossing-Pedestrian',10],
                     ['Crossing-Vehicle', 8],
                     ['Jumped from train', 3],                    
-                    ['Not available', 6],
+                    ['Not available', 7],
                     ['Between crossings',33]
                 ]
             }]

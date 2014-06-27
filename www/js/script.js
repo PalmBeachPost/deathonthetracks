@@ -19,7 +19,7 @@ function calcLayout()
 	$creditHeight= $bgheight-$('#credits').height();
 	$('#credits').css('top',$creditHeight+'px');
 
-	var $mapheight= math.min(Math.floor($(window).height()*.8), 500)+'px';
+	var $mapheight= Math.min(Math.floor($(window).height()*.8), 500)+'px';
 	$('#mapbox').css('height',$mapheight);
 
 	//This has to happen here because small screens dont have skrollr effects
