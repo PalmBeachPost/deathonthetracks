@@ -13,7 +13,7 @@ $(document).ready(function(){
 	}
 	catch(err){
 		$iheight =Math.min(Math.floor($(window).height()*.6), 500)+'px';
-		$('#mapbox').html("<iframe width='100%' height="+$iheight+" frameBorder='0' src='http://localhost/map.html'></iframe>");
+		$('#mapbox').html("<iframe width='100%' height="+$iheight+" frameBorder='0' src='http://www2.palmbeachpost.com/projects/news/trains/map.html'></iframe>");
 		disableSkrollr();
 		console.log("Error trying to load custom map: "+ err);
 	}
