@@ -51,7 +51,7 @@ function MyHTML5Shiv()
 {
 	$('div#map').attr("data-anchor-target","#mapbuddy")
 		.attr("data-top-top","position:inherit;width:!100%")
-	 	.attr("data--50-top","position:fixed;top:!17%;width:!24%")
+	 	.attr("data--50-top","position:fixed;bottom:initial;top:!17%;width:!24%")
 	 	.attr("data-bottom","position:absolute;bottom:!0.5%;width:!30%;top:initial");
 
 	 $('a.left.carousel-control').attr("data-slide","prev");
