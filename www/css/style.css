@@ -12,7 +12,6 @@
 }
 
 
-
 /*----------------------------cover----------------------*/
 
 .cover{
@@ -23,7 +22,7 @@
   	-o-background-size: cover;
   	background-size: cover;
   	background-position: 29% 50%;
-	height: 20vh;
+	height: 100%;
 }
 
 .content-section #hed {
@@ -79,9 +78,6 @@
 	text-align: justify;
 	margin-top: 50px;
 }
-.bold{
-	font-weight: bold;
-}
 #story-section section{
 	padding-top: 20px;
 }
@@ -113,7 +109,9 @@
 	float: right;
 	margin-left: 24px;
 }
-
+.bold{
+	font-weight: bold;
+}
 .rail {
 	width: 30%;
 	padding-bottom: 50px;
@@ -129,7 +127,11 @@
 .notrail .story p {
 	width: 80%;
 }
-
+#contrib{
+	font-style: italic;
+	color:#006cb7;
+}
+/*--------------MAP-------------------*/
 #mapdetails{		
 	padding-top: 30px;
 	padding-right: 5px;
@@ -225,16 +227,34 @@ p.note{
 
 
 /*-------------------------------MEDIA QUERIES----------------------*/
-
 @media only screen  and  (max-width : 480px) {
-	/*----------general----*/
-	.full{
-		width:90%;
+	#covercred{
+		display: none;
 	}
+	/*-----------img-----------*/	
+	#leonorimg {
+		max-width: initial;
+		overflow: hidden;
+	}
+	.wraparound{
+		width: 100%;
+		min-width: initial;
+	}
+	.caption{			
+		margin-bottom: 4%;
+	}
+
 	.left,.right{
 		float: none;
 		margin-right: 0px;
 		margin-left:0px;
+	}
+}
+
+@media only screen  and  (max-width : 768px) {
+	/*----------general----*/
+	.full{
+		width:90%;
 	}
 /*------------HED---------*/	
 	.content-section #hed{
@@ -265,21 +285,6 @@ p.note{
 		font-size: .75em;
 	}
 
-	#covercred{
-		display: none;
-	}
-/*-----------img-----------*/	
-	#leonorimg {
-		max-width: initial;
-		overflow: hidden;
-	}
-	.wraparound{
-		width: 100%;
-		min-width: initial;
-	}
-	.caption{			
-		margin-bottom: 4%;
-	}
 /*--------------Map-------------*/
 	.rail{
 		width:100%;
@@ -332,5 +337,12 @@ p.note{
 
 	#hed h1{
 		font-size: 3.3em;
+	}
+}
+
+@media only screen  and  (max-width : 599px){
+	#flatpage-well{
+		padding: 0;
+		margin: 0;
 	}
 }

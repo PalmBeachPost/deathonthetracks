@@ -15,33 +15,25 @@ function calcLayout()
 	$bgheight=$(window).height()*.9-0;
 	$('.cover').css('height', $bgheight+'px');
 
-	//calculate where to place photo credits
-	$creditHeight= $bgheight-$('#credits').height();
-	$('#credits').css('top',$creditHeight+'px');
-
 	var $mapheight= Math.min(Math.floor($(window).height()*.8), 500)+'px';
 	$('#mapbox').css('height',$mapheight);
 
 	//This has to happen here because small screens dont have skrollr effects
 	if(skrollrInstance == null){
-		if($(window).width()>480)
+		if($(window).width()>768)
 		{
 			if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-				skrollrInstance = skrollr.init();
-				if(map != null){
-				map.dragging.enable();
-				}
+				skrollrInstance = skrollr.init();				
 			}
 		}
 	}
 	else {
-		if($(window).width()<=480)
+		if($(window).width()<=768)
 		{
 			if(skrollrInstance!=null){
 				skrollrInstance.destroy();
 				skrollrInstance=null;
 			}
-			map.dragging.disable();
 		}
 	}
 
@@ -50,9 +42,14 @@ function calcLayout()
 function MyHTML5Shiv()
 {
 	$('div#map').attr("data-anchor-target","#mapbuddy")
-		.attr("data-top-top","position:inherit;width:!100%")
+	 	.attr("data-top-top","position:inherit;bottom:!10%;;width:!100%")
+	 	.attr("data--50-top","position:fixed;bottom:!7%;width:!24%")
+	 	.attr("data-bottom","position:absolute;bottom:!0%;width:!30%;");
+
+
+	/*	.attr("data-top-top","position:inherit;width:!100%")
 	 	.attr("data--50-top","position:fixed;bottom:initial;top:!17%;width:!24%")
-	 	.attr("data-bottom","position:absolute;bottom:!0.5%;width:!30%;top:initial");
+	 	.attr("data-bottom","position:absolute;bottom:!0.5%;width:!30%;top:initial");*/
 
 	 $('a.left.carousel-control').attr("data-slide","prev");
 	 $('a.right.carousel-control').attr("data-slide","next");

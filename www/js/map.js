@@ -21,13 +21,15 @@ var highlightIcon = new myIcon(
 		 iconSize: [16,16],
 		 iconAnchor: [8,8]
 		})
+var zoomLevel = ($(window).width()<=480)? 8 : 13;
 
 //get the baselayer map and store ref
-var map = L.mapbox.map('mapbox', 'kavyas.ijdg04lh', {
+map = L.mapbox.map('mapbox', 'kavyas.ijiejk97', {
 	minZoom:8,
 	maxZoom:15
 })
-.setView([26.336588, -80.091286],10);
+.setView([26.336588, -80.091286],zoomLevel);
+//map.dragging.disable();
 
 //create a features layer to add points to
 var incidentsLayer = L.mapbox.featureLayer().addTo(map);
@@ -100,8 +102,7 @@ function panMapTo(marker)
 {
 	var coords= marker.feature.geometry.coordinates;
 	map.panTo([coords[1],coords[0]],{
-		animate:true,
-		zoom:12
+		animate:true
 	});
 }
 
