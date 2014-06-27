@@ -10,7 +10,9 @@
 .forcefullwidth{
 	width: 100%;
 }
-
+html {
+	height:100%;
+}
 
 /*----------------------------cover----------------------*/
 
@@ -93,6 +95,7 @@
 	margin: auto;
 }
 .graphic{
+	width:350px;
 	margin-bottom: 45px;
 	margin-top: 45px;	
 }
@@ -249,6 +252,9 @@ p.note{
 		margin-right: 0px;
 		margin-left:0px;
 	}
+	.graphic{
+		width:100%;
+	}
 }
 
 @media only screen  and  (max-width : 768px) {
@@ -287,6 +293,7 @@ p.note{
 
 /*--------------Map-------------*/
 	.rail{
+		width:300px;
 		width:100%;
 		padding: 0;
 	}

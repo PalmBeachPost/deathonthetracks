@@ -3,7 +3,10 @@ $(document).ready(function(){
 	MyHTML5Shiv();
 	skrollrInstance=null;
 	calcLayout();	
+	loadMap();
+	loadGraphics();	
 	$('.carousel').carousel({ interval: false});
+	//calcLayout();
 
 	var throttledResize = _.throttle(calcLayout, 100);
 	$(window).resize(throttledResize);	
@@ -15,8 +18,14 @@ function calcLayout()
 	$bgheight=$(window).height()*.9-0;
 	$('.cover').css('height', $bgheight+'px');
 
-	var $mapheight= Math.min(Math.floor($(window).height()*.8), 500)+'px';
+	var $mapheight= Math.min(Math.floor($(window).height()*.6), 400)+'px';
 	$('#mapbox').css('height',$mapheight);
+
+	if($(window).width()>768){
+		$railwidth= Math.floor($(window).width()*.24)+'px';
+		$('.rail').css('width',$railwidth);
+		$('.graphic').css('width', '350px')
+	}
 
 	//This has to happen here because small screens dont have skrollr effects
 	if(skrollrInstance == null){
@@ -33,7 +42,7 @@ function calcLayout()
 			if(skrollrInstance!=null){
 				skrollrInstance.destroy();
 				skrollrInstance=null;
-			}
+			}			
 		}
 	}
 
@@ -47,7 +56,7 @@ function MyHTML5Shiv()
 	 	.attr("data-bottom","position:absolute;bottom:!0%;width:!30%;");
 
 
-	/*	.attr("data-top-top","position:inherit;width:!100%")
+		/*.attr("data-top-top","position:inherit;width:!100%")
 	 	.attr("data--50-top","position:fixed;bottom:initial;top:!17%;width:!24%")
 	 	.attr("data-bottom","position:absolute;bottom:!0.5%;width:!30%;top:initial");*/
 
