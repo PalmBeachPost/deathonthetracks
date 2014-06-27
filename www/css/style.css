@@ -198,6 +198,12 @@ html {
 #leonorimg img{
 	min-width: 100%;
 }
+
+.how{
+	background-color: #FAFAED;
+	border: 1px solid gray;
+	margin-top: 10px;
+}
 /*-------------------notes------------------------------------------*/
 p.note{
 	width:95%;
