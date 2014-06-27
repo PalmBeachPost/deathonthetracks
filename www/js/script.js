@@ -5,25 +5,33 @@ $(document).ready(function(){
 	calcLayout();	
 	$('.carousel').carousel({ interval: false});		
 	loadGraphics();	
-	//calcLayout();
 
 	var throttledResize = _.throttle(calcLayout, 100);
 	$(window).resize(throttledResize);	
-	try{
-		if((/Firefox/i).test(navigator.userAgent)){
-			au = 1;
-			console.log("au set to "+au);
-		}
+	try{	
 		loadMap();
 	}
 	catch(err){
-		$('#mapbox').html("<img src='http://media.cmgdigital.com/shared/img/photos/2014/06/27/45/08/mapcover.jpg'/>");
-		console.log("maperror: "+err);
+		$iheight =Math.min(Math.floor($(window).height()*.6), 500)+'px';
+		$('#mapbox').html("<iframe width='100%' height="+$iheight+" frameBorder='0' src='http://localhost/map.html'></iframe>");
+		disableSkrollr();
+		console.log("Error trying to load custom map: "+ err);
 	}
 });
 
-function calcLayout()
-{
+function setSkrollrState(){	
+	if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)
+		&&($(window).width()>768))
+	{
+		skrollrInstance = skrollr.init();				
+	}
+	else{
+		skrollrInstance && skrollrInstance.destroy();
+		skrollrInstance=null;
+	}	
+}
+
+function calcLayout(){
 	// calculate cover height
 	$bgheight=$(window).height()*.9-0;
 	$('.cover').css('height', $bgheight+'px');
@@ -37,40 +45,15 @@ function calcLayout()
 		$('.graphic').css('width', '350px')
 	}
 
-	//This has to happen here because small screens dont have skrollr effects
-	if(skrollrInstance == null){
-		if($(window).width()>768)
-		{
-			if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-				skrollrInstance = skrollr.init();				
-			}
-		}
-	}
-	else {
-		if($(window).width()<=768)
-		{
-			if(skrollrInstance!=null){
-				skrollrInstance.destroy();
-				skrollrInstance=null;
-			}			
-		}
-	}
-
-
+	//since skrollr state changes with screen size
+	setSkrollrState();
 }
 
-function MyHTML5Shiv()
-{
+function MyHTML5Shiv(){
 	$('div#map').attr("data-anchor-target","#mapbuddy")
 	 	.attr("data-top-top","position:inherit;bottom:!10%;;width:!100%")
 	 	.attr("data--50-top","position:fixed;bottom:!7%;width:!24%")
 	 	.attr("data-bottom","position:absolute;bottom:!0%;width:!30%;");
-
-
-		/*.attr("data-top-top","position:inherit;width:!100%")
-	 	.attr("data--50-top","position:fixed;bottom:initial;top:!17%;width:!24%")
-	 	.attr("data-bottom","position:absolute;bottom:!0.5%;width:!30%;top:initial");*/
-
 	 $('a.left.carousel-control').attr("data-slide","prev");
 	 $('a.right.carousel-control').attr("data-slide","next");
 }
